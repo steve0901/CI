@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pageObjects.CurentLetterPage;
 import pageObjects.GmailLoginPage;
 import pageObjects.NewLetterPage;
-import pageObjects.SentLettersFolder;
 
 public class GmailTest {
 
@@ -25,10 +24,9 @@ public class GmailTest {
 		/*SentLettersFolder sentLettersFolder = new SentLettersFolder();
 		sentLettersFolder.checkSentLetters();
 		Assert.assertEquals(sentLettersFolder.getCurrentLetter().getText(), Const.MESSAGE);
-		sentLettersFolder.choseCurentLetter();
-		*/
-		//CurentLetterPage curentLetterPage = new CurentLetterPage();
-		//curentLetterPage.deleteCurentLetter();
+		sentLettersFolder.choseCurentLetter();*/
+		CurentLetterPage curentLetterPage = new CurentLetterPage();
+		curentLetterPage.deleteCurentLetter();
 	}
 	@AfterTest
 	public void tearDown(){
