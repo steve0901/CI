@@ -2,6 +2,7 @@ package driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,8 +26,7 @@ public class WebDriverManager {
 
 	public static WebDriver setUp() {
 		WebDriver chromeDriver = new ChromeDriver();
-		chromeDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		chromeDriver.manage().window().maximize();
+		chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		chromeDriver.get("https://mail.google.com/");
 		return chromeDriver;
 	}

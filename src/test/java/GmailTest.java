@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.CurentLetterPage;
 import pageObjects.GmailLoginPage;
 import pageObjects.NewLetterPage;
+import pageObjects.SentLettersFolder;
 
 public class GmailTest {
 
@@ -20,13 +21,17 @@ public class GmailTest {
 		newLetterPage.sendNewLetter(Const.ADRESSEE, Const.SUBJECT, Const.MESSAGE);
 		Assert.assertFalse(newLetterPage.getSendDialogWindow().isDisplayed());
 		Assert.assertTrue(newLetterPage.getSentLetterConfirmation().isDisplayed());
-		newLetterPage.openSentLetters();
+		/*newLetterPage.openSentLetters();*/
+		Assert.assertTrue(newLetterPage.getSentLetterFolderButton().isDisplayed());
+		Assert.assertTrue(newLetterPage.getSentLetterFolderButton().isEnabled());
+		newLetterPage.checkSentLetters();
+		/*	newLetterPage.checkSentLetters();*/
 		/*SentLettersFolder sentLettersFolder = new SentLettersFolder();
-		sentLettersFolder.checkSentLetters();
-		Assert.assertEquals(sentLettersFolder.getCurrentLetter().getText(), Const.MESSAGE);
-		sentLettersFolder.choseCurentLetter();*/
-		CurentLetterPage curentLetterPage = new CurentLetterPage();
-		curentLetterPage.deleteCurentLetter();
+		sentLettersFolder.checkSentLetters();*/
+		/*Assert.assertEquals(sentLettersFolder.getCurrentLetter().getText(), Const.MESSAGE);*/
+		/*sentLettersFolder.choseCurentLetter();*/
+	/*	CurentLetterPage curentLetterPage = new CurentLetterPage();
+		curentLetterPage.deleteCurentLetter();*/
 	}
 	@AfterTest
 	public void tearDown(){

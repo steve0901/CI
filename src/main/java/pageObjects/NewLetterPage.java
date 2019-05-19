@@ -4,10 +4,9 @@ import Model.Const;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.UUID;
-
-
 
 public class NewLetterPage extends BasePage {
 
@@ -46,6 +45,27 @@ public class NewLetterPage extends BasePage {
 		inputSubjectBar.sendKeys(subject);
 		inputTextArea.sendKeys(message);
 		sendLetterButton.click();
+	}
+
+	@FindBy(css = "div.qj.qr")
+	private WebElement sentLetterFolderButton;
+
+	public WebElement getSentLetterFolderButton() {
+		return sentLetterFolderButton;
+	}
+
+	@FindBy(xpath = "//tbody/tr[0]//span")
+	private WebElement currentLetter;
+
+	public void checkSentLetters(){
+		webDriverWait.until(ExpectedConditions.elementToBeClickable(sentLetterFolderButton));
+		sentLetterFolderButton.click();
+		webDriverWait.until(ExpectedConditions.elementToBeClickable(currentLetter));
+		currentLetter.click();
+		/*webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
+		/*searchBar.sendKeys("in:sent");
+		searchBarButton.click();
+		webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
 	}
 
 	public void openSentLetters(){
