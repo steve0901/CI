@@ -1,12 +1,8 @@
 package pageObjects;
 
-import Model.Const;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.UUID;
 
 public class NewLetterPage extends BasePage {
 

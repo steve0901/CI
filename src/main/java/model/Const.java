@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Const {
 	public static final String MESSAGE = "HELLO WORLD";

@@ -16,18 +16,18 @@ public class SentLettersFolder extends BasePage{
 	@FindBy(css = "input[name='q']")
 	private WebElement searchBar;
 
-	@FindBy(xpath = "//button[@class='gb_Pe.gb_Qe']/svg")
+	@FindBy(xpath = "//form[@role='search']/button[4]")
 	private WebElement searchBarButton;
 
-	@FindBy(xpath = "//tbody/tr[0]//span")
+	@FindBy(xpath = "//div[@role='main']//tbody/tr[1]/td[6]")
 	private WebElement currentLetter;
 
 	public void checkSentLetters(){
-		sentLetterFolderButton.click();
-		webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));
-		/*searchBar.sendKeys("in:sent");
-		searchBarButton.click();
+		/*sentLetterFolderButton.click();
 		webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
+		searchBar.sendKeys("in:sent");
+		searchBarButton.click();
+		webDriverWait.until(ExpectedConditions.urlContains("sent"));
 	}
 
 	public void choseCurentLetter(){

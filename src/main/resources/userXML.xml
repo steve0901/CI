@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="userXSL.xsl"?>
+<users>
+<user number="1">
+    <login>tester.toster2019@gmail.com</login>
+    <password>synoviat1994</password>
+    <adressee>stepan.synoviat@gmail.com</adressee>
+    <subject>TEST</subject>
+    <text>HELLO WORLD</text>
+</user>
+</users>
