@@ -19,7 +19,7 @@ public class WebDriverManager {
 		System.setProperty(prop.getPropValues("driverName"), prop.getPropValues("driverPath"));
 		WebDriver instance = new ChromeDriver() {
 			{
-				manage().timeouts().implicitlyWait(350, TimeUnit.SECONDS);
+				manage().timeouts().implicitlyWait(400, TimeUnit.SECONDS);
 				get(prop.getPropValues("url"));
 			}
 		};

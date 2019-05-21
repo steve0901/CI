@@ -2,7 +2,6 @@ import model.Const;
 import driver.WebDriverManager;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.CurentLetterPage;
@@ -35,8 +34,8 @@ public class GmailTest {
 
 		NewLetterPage newLetterPage = new NewLetterPage();
 		newLetterPage.sendNewLetter(Const.ADRESSEE, Const.SUBJECT, Const.MESSAGE);
-	//	Assert.assertFalse(newLetterPage.getSendDialogWindow().isDisplayed());
-	//	Assert.assertTrue(newLetterPage.getSentLetterConfirmation().isDisplayed());
+	/*	Assert.assertFalse(newLetterPage.getSendDialogWindow().isDisplayed());
+		Assert.assertTrue(newLetterPage.getSentLetterConfirmation().isDisplayed());*/
 		SentLettersFolder sentLettersFolder = new SentLettersFolder();
 		sentLettersFolder.checkSentLetters();
 		sentLettersFolder.choseCurentLetter();
