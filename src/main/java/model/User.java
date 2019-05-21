@@ -2,8 +2,6 @@ package model;
 
 public class User {
 	private Integer number;
-	private String login;
-	private String password;
 	private String adressee;
 	private String subject;
 	private String textMessage;
@@ -31,22 +29,6 @@ public class User {
 
 	public void setTextMessage(String textMessage) {
 		this.textMessage = textMessage;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public Integer getNumber() {

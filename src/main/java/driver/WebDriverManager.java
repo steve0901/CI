@@ -31,31 +31,4 @@ public class WebDriverManager {
 		webDriverThreadLocal.get().quit();
 		webDriverThreadLocal.set(null);
 	}
-
-	/*public static WebDriver driver = null;
-	private static PropertiesReader prop = new PropertiesReader();
-
-	static {
-		System.setProperty(prop.getPropValues("driverName"), prop.getPropValues("driverPath"));
-		//System.setProperty(prop.getDriverName(), src/main/resources/chromedriver.exe);
-	}
-
-	public static WebDriver getDriver() {
-		if (driver == null) {
-			driver = setUp();
-		}
-		return driver;
-	}
-
-	public static WebDriver setUp() {
-		WebDriver chromeDriver = new ChromeDriver();
-		chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		chromeDriver.get(prop.getPropValues("url"));
-		//chromeDriver.get(prop.getUrl());
-
-		return chromeDriver;
-	}
-	public static void quit(){
-		driver.quit();
-	}*/
 }

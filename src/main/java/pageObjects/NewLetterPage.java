@@ -1,7 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class NewLetterPage extends BasePage {
@@ -29,10 +29,10 @@ public class NewLetterPage extends BasePage {
 		return sentLetterConfirmation;
 	}
 
-	@FindBy(css ="div.nH.Hd[role='dialog']")
+	@FindBy(css = "div.nH.Hd[role='dialog']")
 	private WebElement sendDialogWindow;
 
-	@FindBy(xpath ="//*[@id=\"link_vsm\"]")
+	@FindBy(xpath = "//*[@id=\"link_vsm\"]")
 	private WebElement sentLetterConfirmation;
 
 	public void sendNewLetter(String adressee, String subject, String message) {
@@ -53,18 +53,14 @@ public class NewLetterPage extends BasePage {
 	@FindBy(xpath = "//tbody/tr[0]//span")
 	private WebElement currentLetter;
 
-	public void checkSentLetters(){
+	public void checkSentLetters() {
 		webDriverWait.until(ExpectedConditions.elementToBeClickable(sentLetterFolderButton));
 		sentLetterFolderButton.click();
 		webDriverWait.until(ExpectedConditions.elementToBeClickable(currentLetter));
 		currentLetter.click();
-		/*webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
-		/*searchBar.sendKeys("in:sent");
-		searchBarButton.click();
-		webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
 	}
 
-	public void openSentLetters(){
+	public void openSentLetters() {
 		sentLetterConfirmation.click();
 	}
 

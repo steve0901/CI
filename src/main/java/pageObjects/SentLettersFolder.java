@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SentLettersFolder extends BasePage{
+public class SentLettersFolder extends BasePage {
 
 	@FindBy(css = "div.qj.qr")
 	private WebElement sentLetterFolderButton;
@@ -22,20 +22,15 @@ public class SentLettersFolder extends BasePage{
 	@FindBy(xpath = "//div[@role='main']//tbody/tr[1]/td[6]")
 	private WebElement currentLetter;
 
-	public void checkSentLetters(){
-		/*sentLetterFolderButton.click();
-		webDriverWait.until(ExpectedConditions.visibilityOf(currentLetter));*/
+	public void checkSentLetters() {
 		searchBar.sendKeys("in:sent");
 		searchBarButton.click();
 		webDriverWait.until(ExpectedConditions.urlContains("sent"));
 	}
 
-	public void choseCurentLetter(){
+	public void choseCurentLetter() {
 		currentLetter.click();
 	}
-
-
-
 
 
 }

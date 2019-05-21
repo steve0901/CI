@@ -19,11 +19,9 @@ public class CurentLetterPage extends BasePage {
 	@FindBy(css = "img.hA.T-I-J3[role='menu']")
 	private WebElement moreOption;
 
-	public void deleteCurentLetter(){
+	public void deleteCurentLetter() {
 		webDriverWait.until(ExpectedConditions.visibilityOf(deleteButton));
 		webDriverWait.until(ExpectedConditions.elementToBeClickable(deleteButton));
-
-	//	deleteButton.click();
 
 	}
 }

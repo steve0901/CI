@@ -15,12 +15,23 @@ import java.io.IOException;
 
 public class XMLparser {
 
-	public User getUser() throws ParserConfigurationException, IOException, SAXException {
+	public User getUser() {
 		File file = new File("src/main/resources/userXML.xml");
 		User user = new User();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
-		Document document = documentBuilder.parse(file);
+		DocumentBuilder documentBuilder = null;
+		Document document = null;
+		try {
+			documentBuilder = factory.newDocumentBuilder();
+
+			document = documentBuilder.parse(file);
+		} catch (SAXException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		}
 
 		Element usersElement = (Element) document.getElementsByTagName("users").item(0);
 
@@ -38,14 +49,6 @@ public class XMLparser {
 						Element childElement = (Element) childNode.item(j);
 
 						switch (childElement.getNodeName()) {
-
-							case "login": {
-								user.setLogin(childElement.getTextContent());
-							}
-
-							case "password": {
-								user.setPassword(childElement.getTextContent());
-							}
 
 							case "adressee": {
 								user.setAdressee(childElement.getTextContent());
