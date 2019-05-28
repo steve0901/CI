@@ -1,4 +1,5 @@
-import businessObjects.CheckSentLetterBO;
+
+import businessObjects.GoToSentLetterBO;
 import businessObjects.LoginPageBO;
 import businessObjects.NewLetterBO;
 import driver.WebDriverManager;
@@ -41,8 +42,9 @@ public class GmailTest {
 		newLetterBO.sendNewLetter(user.getAdressee(), user.getSubject(), user.getTextMessage());
 		logger.info("The message was sent");
 
-		CheckSentLetterBO checkSentLetterBO = new CheckSentLetterBO();
-		checkSentLetterBO.checkSentLettersFolder(user.getTextMessage());
+		GoToSentLetterBO goToSentLetterBO = new GoToSentLetterBO();
+		goToSentLetterBO.openSentLetter();
+		goToSentLetterBO.isTheSameLetter(user.getTextMessage());
 		logger.info("The test was successful");
 	}
 

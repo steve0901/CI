@@ -6,13 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SentLettersFolder extends BasePage {
 
-	@FindBy(css = "div.qj.qr")
-	private WebElement sentLetterFolderButton;
-
-	public WebElement getCurrentLetter() {
-		return currentLetter;
-	}
-
 	@FindBy(css = "input[name='q']")
 	private WebElement searchBar;
 
@@ -21,6 +14,10 @@ public class SentLettersFolder extends BasePage {
 
 	@FindBy(xpath = "//div[@role='main']//tbody/tr[1]/td[6]")
 	private WebElement currentLetter;
+
+	public WebElement getCurrentLetter() {
+		return currentLetter;
+	}
 
 	public void checkSentLetters() {
 		searchBar.sendKeys("in:sent");
@@ -31,6 +28,4 @@ public class SentLettersFolder extends BasePage {
 	public void choseCurentLetter() {
 		currentLetter.click();
 	}
-
-
 }

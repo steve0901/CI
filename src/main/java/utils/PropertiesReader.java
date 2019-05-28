@@ -17,7 +17,8 @@ public class PropertiesReader {
 	public String getPropValues(String value) {
 		try {
 			Properties prop = new Properties();
-			inputStream = new FileInputStream("src/main/resources/configuration.properties");
+			inputStream = new FileInputStream(
+					"src/main/resources/configuration.properties");
 			prop.load(inputStream);
 
 			// get the property value

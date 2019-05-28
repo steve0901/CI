@@ -26,4 +26,5 @@ public class GmailLoginPage extends BasePage {
 		passwordInputBar.sendKeys(password);
 		passwordNextBatton.click();
 	}
+
 }

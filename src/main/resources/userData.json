@@ -1,0 +1,47 @@
+[
+{
+"email" : "tester.toster2019@gmail.com",
+"password" : "synoviat1994",
+"message" : {
+"adressee" : "synoviat.test1@gmail.com",
+"subject" : "test",
+"text" : "Hello user №2"
+}
+},
+{
+"email" : "synoviat.test1@gmail.com",
+"password" : "synoviat1994",
+"message" : {
+"adressee" : "azorahaiy2019@gmail.com",
+"subject" : "test",
+"text" : "Hello user №3"
+}
+},
+{
+"email" : "azorahaiy2019@gmail.com",
+"password" : "synoviat94",
+"message" : {
+"adressee" : "daenerystargarien6@gmail.com",
+"subject" : "test",
+"text" : "Hello user №4"
+}
+},
+{
+"email" : "daenerystargarien6@gmail.com",
+"password" : "synoviat1994",
+"message" : {
+"adressee" : "johnsnowkingkiller@gmail.com",
+"subject" : "test",
+"text" : "Hello user №5"
+}
+},
+{
+"email" : "johnsnowkingkiller@gmail.com",
+"password" : "gameofthrones2019",
+"message" : {
+"adressee" : "tester.toster2019@gmail.com",
+"subject" : "test",
+"text" : "Hello user №5"
+}
+}
+]

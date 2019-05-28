@@ -10,4 +10,5 @@ public class LoginPageBO {
 		loginPage.writeLogin(email);
 		loginPage.writePasswordAndEnter(password);
 	}
+
 }
